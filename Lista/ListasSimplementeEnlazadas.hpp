@@ -37,6 +37,7 @@ public:
     T ObtenerPrimero() const;
     T ObtenerUltimo() const;
     T ObtenerPorPos(int pos) const;
+    void ModificarPos(T valor, int pos);
     int NumElementos() const;
     void Vaciar();
 

@@ -148,6 +148,17 @@ T ListaSimple<T>::ObtenerPorPos(int pos) const
 }
 //*********************************************************************************************
 template <typename T>
+void ListaSimple<T>::ModificarPos(T valor, int pos)
+{
+    Elemento *actual = primero;
+    if(pos<0 || pos >= tam) FueraDeRango();
+    for(int i = 0; actual!= nullptr && i<pos; ++i)
+        actual = actual->siguiente;
+    if(actual!= nullptr) actual->valor = valor;
+    else throw "Ocurrio un error al encontrar la posicion";
+}
+//*********************************************************************************************
+template <typename T>
 int ListaSimple<T>::NumElementos() const
 {
     return tam;
