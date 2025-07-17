@@ -93,6 +93,20 @@ void  ListaSimple<T>::EliminarPos(int pos)
     }
 }
 //*********************************************************************************************
+//Buscar un valor
+template <typename T>
+bool ListaSimple<T>::BuscarValor(T valor) const
+{
+    Elemento *actual = primero;
+    while(actual != nullptr){
+        if(actual->valor == valor){
+            return true;
+        }
+        actual = actual->siguiente;
+    }
+    return false;
+}
+//*********************************************************************************************
 template <typename T>
 void ListaSimple<T>::Vaciar()
 {

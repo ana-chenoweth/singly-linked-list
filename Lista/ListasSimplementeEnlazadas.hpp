@@ -15,6 +15,7 @@ public:
     void EliminarInicio();
     void EliminarFinal();
     void EliminarPos(int pos);
+    bool BuscarValor(T valor) const;
     void Vaciar();
 
 private:
