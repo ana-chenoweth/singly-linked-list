@@ -34,6 +34,8 @@ public:
     bool BuscarValor(T valor) const;
     int BuscarPos(T valor) const;
     bool EstaVacia() const;
+    T ObtenerPrimero() const;
+    T ObtenerUltimo() const;
     void Vaciar();
 
 private:

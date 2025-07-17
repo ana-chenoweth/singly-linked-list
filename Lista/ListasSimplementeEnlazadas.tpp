@@ -126,6 +126,18 @@ bool ListaSimple<T>::EstaVacia() const
 }
 //*********************************************************************************************
 template <typename T>
+T ListaSimple<T>::ObtenerPrimero() const
+{
+    return primero->valor;
+}
+//*********************************************************************************************
+template <typename T>
+T ListaSimple<T>::ObtenerUltimo() const
+{
+    return ultimo->valor;
+}
+//*********************************************************************************************
+template <typename T>
 void ListaSimple<T>::Vaciar()
 {
     while(!EstaVacia()){
