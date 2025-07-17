@@ -7,6 +7,7 @@ class ListaSimple
 {
 public:
     ListaSimple();
+    ~ListaSimple();
     ListaSimple(const ListaSimple<T> &l);
 
 private:
