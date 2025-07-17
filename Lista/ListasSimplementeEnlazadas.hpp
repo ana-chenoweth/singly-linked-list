@@ -40,6 +40,7 @@ public:
     void ModificarPos(T valor, int pos);
     int NumElementos() const;
     void Vaciar();
+    void Imprimir() const;
 
 private:
     int tam, pos;

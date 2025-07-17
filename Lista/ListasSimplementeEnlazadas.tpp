@@ -171,3 +171,13 @@ void ListaSimple<T>::Vaciar()
         EliminarFinal();
     }
 }
+//*********************************************************************************************
+template <typename T>
+void ListaSimple<T>::Imprimir() const
+{
+    Elemento *actual = primero;
+    while(actual != nullptr){
+        std::cout << actual->valor << ", ";
+        actual = actual->siguiente;
+    }
+}
