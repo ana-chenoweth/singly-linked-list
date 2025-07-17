@@ -1,6 +1,15 @@
 #ifndef LISTASSIMPLEMENTEENLAZADAS_HPP_INCLUDED
 #define LISTASSIMPLEMENTEENLAZADAS_HPP_INCLUDED
 
+#define NO_ENCONTRADO -1
+
+class FueraDeRango : public std::exception {
+public:
+    const char* what() const throw() override {
+        return "indice fuera de rango";
+    }
+};
+
 template <typename T>
 
 class ListaSimple
