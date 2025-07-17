@@ -36,6 +36,7 @@ public:
     bool EstaVacia() const;
     T ObtenerPrimero() const;
     T ObtenerUltimo() const;
+    T ObtenerPorPos(int pos) const;
     void Vaciar();
 
 private:

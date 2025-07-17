@@ -138,6 +138,16 @@ T ListaSimple<T>::ObtenerUltimo() const
 }
 //*********************************************************************************************
 template <typename T>
+T ListaSimple<T>::ObtenerPorPos(int pos) const
+{
+    Elemento *actual = primero;
+    for(int i = 0; actual!= nullptr && i<pos; ++i)
+        actual = actual->siguiente;
+    if(actual!= nullptr) return actual->valor;
+    else throw "No se encuentra ese valor";
+}
+//*********************************************************************************************
+template <typename T>
 void ListaSimple<T>::Vaciar()
 {
     while(!EstaVacia()){
