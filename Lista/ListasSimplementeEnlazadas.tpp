@@ -120,6 +120,12 @@ int ListaSimple<T>::BuscarPos(T valor) const
 }
 //*********************************************************************************************
 template <typename T>
+bool ListaSimple<T>::EstaVacia() const
+{
+    return tam==0;
+}
+//*********************************************************************************************
+template <typename T>
 void ListaSimple<T>::Vaciar()
 {
     while(!EstaVacia()){
