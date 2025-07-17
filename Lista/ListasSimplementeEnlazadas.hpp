@@ -12,6 +12,8 @@ public:
     void AgregarInicio(T valor);
     void AgregarFinal(T valor);
     void AgregarPos(T valor, int pos);
+    void EliminarInicio();
+    void EliminarFinal();
     void Vaciar();
 
 private:

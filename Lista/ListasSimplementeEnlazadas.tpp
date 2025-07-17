@@ -50,6 +50,31 @@ void ListaSimple<T>::AgregarPos(T valor, int pos)
         ++tam;
     }
 }
+//************************************************************************************
+template <typename T>
+void  ListaSimple<T>::EliminarInicio()
+{
+    if(EstaVacia()) ListaVacia();
+    Elemento *porBorrar = primero;
+    primero = primero->siguiente;
+    delete porBorrar;
+    --tam;
+    if(EstaVacia()) ultimo = nullptr;
+}
+//************************************************************************************
+template <typename T>
+void  ListaSimple<T>::EliminarFinal()
+{
+    if(EstaVacia()) throw "Lista Vacia"; ListaVacia();
+    Elemento *porBorrar = ultimo;
+    Elemento *penultimo = primero;
+    for(int i = 1; i<tam-2; ++i) penultimo = penultimo->siguiente;
+    penultimo->siguiente = nullptr;
+    ultimo = penultimo;
+    delete porBorrar;
+    --tam;
+    if(EstaVacia()) primero = nullptr;
+}
 //*********************************************************************************************
 template <typename T>
 void ListaSimple<T>::Vaciar()
