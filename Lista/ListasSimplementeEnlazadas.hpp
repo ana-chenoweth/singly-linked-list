@@ -9,6 +9,7 @@ public:
     ListaSimple();
     ~ListaSimple();
     ListaSimple(const ListaSimple<T> &l);
+    void Vaciar();
 
 private:
     int tam, pos;
