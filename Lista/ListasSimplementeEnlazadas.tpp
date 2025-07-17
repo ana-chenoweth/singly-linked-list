@@ -148,6 +148,12 @@ T ListaSimple<T>::ObtenerPorPos(int pos) const
 }
 //*********************************************************************************************
 template <typename T>
+int ListaSimple<T>::NumElementos() const
+{
+    return tam;
+}
+//*********************************************************************************************
+template <typename T>
 void ListaSimple<T>::Vaciar()
 {
     while(!EstaVacia()){
