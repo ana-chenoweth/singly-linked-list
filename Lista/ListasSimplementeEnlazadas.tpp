@@ -16,6 +16,25 @@ ListaSimple<T>::~ListaSimple()
 {
     Vaciar();
 }
+//****************************************************************************************
+template <typename T>
+void ListaSimple<T>::AgregarInicio(T valor)
+{
+        Elemento *nuevo = new Elemento(valor, EstaVacia() ? nullptr : primero);
+        primero = nuevo;
+        if(EstaVacia()) ultimo = nuevo;
+        ++tam;
+}
+//****************************************************************************************
+template <typename T>
+void ListaSimple<T>::AgregarFinal(T valor)
+{
+        Elemento *nuevo = new Elemento(valor, nullptr);
+        ultimo->siguiente = nuevo;
+        ultimo = nuevo;
+        if(EstaVacia()) primero = nuevo;
+        ++tam;
+}
 //*********************************************************************************************
 template <typename T>
 void ListaSimple<T>::Vaciar()

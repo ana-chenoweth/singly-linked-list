@@ -9,6 +9,8 @@ public:
     ListaSimple();
     ~ListaSimple();
     ListaSimple(const ListaSimple<T> &l);
+    void AgregarInicio(T valor);
+    void AgregarFinal(T valor);
     void Vaciar();
 
 private:
