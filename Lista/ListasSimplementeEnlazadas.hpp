@@ -7,6 +7,7 @@ class ListaSimple
 {
 public:
     ListaSimple();
+    ListaSimple(const ListaSimple<T> &l);
 
 private:
     int tam, pos;
