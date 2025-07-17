@@ -3,6 +3,13 @@
 
 #define NO_ENCONTRADO -1
 
+class ListaVacia : public std::exception {
+public:
+    const char* what() const throw() override {
+        return "Lista vacia";
+    }
+};
+
 class FueraDeRango : public std::exception {
 public:
     const char* what() const throw() override {
