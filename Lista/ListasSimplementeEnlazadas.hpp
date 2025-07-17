@@ -11,6 +11,7 @@ public:
     ListaSimple(const ListaSimple<T> &l);
     void AgregarInicio(T valor);
     void AgregarFinal(T valor);
+    void AgregarPos(T valor, int pos);
     void Vaciar();
 
 private:

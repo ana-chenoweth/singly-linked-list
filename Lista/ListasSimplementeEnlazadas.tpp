@@ -35,6 +35,21 @@ void ListaSimple<T>::AgregarFinal(T valor)
         if(EstaVacia()) primero = nuevo;
         ++tam;
 }
+//****************************************************************************************
+template <typename T>
+void ListaSimple<T>::AgregarPos(T valor, int pos)
+{
+    if(pos<0 || pos > tam) FueraDeRango();
+    if(pos==0) AgregarInicio(valor);
+    else if(pos==tam) AgregarFinal(valor);
+    else{
+        Elemento *ant = primero;
+        for(int i = 1; i<pos; ++i) ant = ant->siguiente;
+        Elemento *nuevo = new Elemento(valor, ant->siguiente);
+        ant->siguiente = nuevo;
+        ++tam;
+    }
+}
 //*********************************************************************************************
 template <typename T>
 void ListaSimple<T>::Vaciar()
