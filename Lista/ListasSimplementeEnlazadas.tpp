@@ -75,6 +75,23 @@ void  ListaSimple<T>::EliminarFinal()
     --tam;
     if(EstaVacia()) primero = nullptr;
 }
+//************************************************************************************
+template <typename T>
+void  ListaSimple<T>::EliminarPos(int pos)
+{
+    if(EstaVacia()) ListaVacia();
+    if(pos<0 || pos >= tam) FueraDeRango();
+    if(pos==0) EliminarInicio();
+    else if(pos==tam-1) EliminarFinal();
+    else{
+        Elemento *ant = primero;
+        for(int i = 1; i<pos; ++i) ant = ant->siguiente;
+        Elemento *porBorrar = ant->siguiente;
+        ant->siguiente = porBorrar->siguiente;
+        delete porBorrar;
+        --tam;
+    }
+}
 //*********************************************************************************************
 template <typename T>
 void ListaSimple<T>::Vaciar()

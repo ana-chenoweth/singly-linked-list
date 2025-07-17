@@ -14,6 +14,7 @@ public:
     void AgregarPos(T valor, int pos);
     void EliminarInicio();
     void EliminarFinal();
+    void EliminarPos(int pos);
     void Vaciar();
 
 private:
