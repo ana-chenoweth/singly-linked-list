@@ -16,6 +16,7 @@ public:
     void EliminarFinal();
     void EliminarPos(int pos);
     bool BuscarValor(T valor) const;
+    int BuscarPos(T valor) const;
     void Vaciar();
 
 private:

@@ -107,6 +107,18 @@ bool ListaSimple<T>::BuscarValor(T valor) const
     return false;
 }
 //*********************************************************************************************
+//Buscar la posicion de un valor
+template <typename T>
+int ListaSimple<T>::BuscarPos(T valor) const
+{
+    Elemento *actual = primero;
+    int pos;
+    for(pos = 0; actual!= nullptr && actual->valor != valor; ++pos)
+        actual = actual->siguiente;
+    if(actual!= nullptr) return pos;
+    else NO_ENCONTRADO;
+}
+//*********************************************************************************************
 template <typename T>
 void ListaSimple<T>::Vaciar()
 {
