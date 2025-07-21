@@ -3,6 +3,7 @@
 This academic project demonstrates the implementation of a **singly linked list** using object-oriented programming in C++. It includes basic operations like insertion, deletion, traversal, and search, providing hands-on experience with dynamic memory and pointer-based data structures.
 
 <img src="img/example-use.gif" alt="Example Use" width="600">
+<img src="img/singly-linkedlist.png" alt="Example Use" width="600">
 
 ## Description
 
